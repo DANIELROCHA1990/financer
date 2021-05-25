@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_24_150453) do
+ActiveRecord::Schema.define(version: 2021_05_25_195712) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "country"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_05_24_150453) do
   create_table "clients", force: :cascade do |t|
     t.string "name"
     t.string "company_name"
-    t.string "doument"
+    t.string "document"
     t.string "string"
     t.string "email"
     t.string "phone"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2021_05_24_150453) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "sale_id"
     t.index ["product_id"], name: "index_product_quantities_on_product_id"
     t.index ["user_id"], name: "index_product_quantities_on_user_id"
   end
@@ -80,6 +81,8 @@ ActiveRecord::Schema.define(version: 2021_05_24_150453) do
     t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "price"
+    t.string "photo"
   end
 
   create_table "sales", force: :cascade do |t|
