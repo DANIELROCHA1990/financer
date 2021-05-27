@@ -26,6 +26,7 @@ gem 'rails_admin'
 gem 'devise'
 gem 'cancancan'
 gem 'carrierwave'
+gem 'rails_admin_rollincode', '~> 1.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
